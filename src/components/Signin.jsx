@@ -23,15 +23,13 @@ const Signin = () => {
     const { email, password } = data;
     console.log(data);
     try {
-         const config = { headers: { "Content-Type": "application/json" } };
       await axios.post("https://register-api-nine.vercel.app/login", {
         email,
         password,
-      },config);
+      });
       window.alert("Login Successfully!");
 
     } catch (error) {
-      console.log(error.response.data);
     }
   };
 
