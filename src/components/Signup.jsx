@@ -26,20 +26,17 @@ const Signup = () => {
 
   const postData = async (e) => {
     e.preventDefault();
-    // console.log(values);
     try {
       const { name, phone, email, password } = values;
-   const config = { headers: { "Content-Type": "application/json" } };
       await axios.post("https://register-api-nine.vercel.app/register", {
         name,
         phone,
         email,
         password,
-      },config);
+      });
       novigate('/signin')
       window.alert("Register Successfully!");
     } catch (error) {
-      console.log(error.response.data);
     }
   };
 
