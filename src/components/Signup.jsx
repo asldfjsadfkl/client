@@ -31,8 +31,8 @@ const Signup = () => {
 
        const config = {
         headers:{"Content-type":"application/json"},
-        withCredentials:true
-        }
+        "Access-Control-Allow-Origin":"*",
+        withCredentials:true }
       
       await axios.post("https://register-api-nine.vercel.app/register", {
         name,
