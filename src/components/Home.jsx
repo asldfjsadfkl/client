@@ -7,7 +7,7 @@ import axios from "axios";
 const Home = () => {
   const logout = async () => {
     try {
-      await axios.post("https://register-api-nine.vercel.app/logout");
+      await axios.post("https://register-api-nine.vercel.app/logout",{withCredentials:true});
       window.alert("Logout Successfully!");
     } catch (error) {
       console.log(error.response);
