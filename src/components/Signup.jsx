@@ -28,12 +28,18 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { name, phone, email, password } = values;
+
+       const config = {
+        headers:{"Content-type":"application/json"},
+        withCredentials:true
+        }
+      
       await axios.post("https://register-api-nine.vercel.app/register", {
         name,
         phone,
         email,
         password,
-      });
+      },config);
       novigate('/signin')
       window.alert("Register Successfully!");
     } catch (error) {
