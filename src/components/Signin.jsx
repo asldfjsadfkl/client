@@ -23,10 +23,10 @@ const Signin = () => {
     const { email, password } = data;
     console.log(data);
     try {
-      const config = {
+     const config = {
         headers:{"Content-type":"application/json"},
-        withCredentials:true
-        }
+        "Access-Control-Allow-Origin":"*",
+        withCredentials:true }
       await axios.post("https://register-api-nine.vercel.app/login", {
         email,
         password,
