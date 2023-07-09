@@ -9,7 +9,7 @@ const Home = () => {
     try {
       const config = {
         headers:{"Content-type":"application/json"},
-        "Access-Control-Allow-Origin":"*",
+         "Access-Control-Allow-Origin":"https://register-api-nine.vercel.app",
         withCredentials:true
       }
       
