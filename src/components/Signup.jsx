@@ -33,7 +33,7 @@ const Signup = () => {
         headers:{"Content-type":"application/json"},
         withCredentials:true }
       
-      await axios.post("https://register-api-nine.vercel.app/signup", {
+     const {data} =  await axios.post("https://register-api-nine.vercel.app/signup", {
         name,
         phone,
         email,
