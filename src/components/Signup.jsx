@@ -40,6 +40,7 @@ const Signup = () => {
         email,
         password,
       },config);
+         localStorage.setItem("token", data.token);
       novigate('/signin')
       window.alert("Register Successfully!");
     } catch (error) {
